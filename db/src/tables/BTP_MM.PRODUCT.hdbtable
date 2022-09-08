@@ -1,0 +1,10 @@
+COLUMN TABLE "BTP_MM.PRODUCT" (
+    ID NVARCHAR(36),
+    NAME NVARCHAR(50),
+    CATEGORY NVARCHAR(50),
+    createdAt TIMESTAMP,
+    createdBy NVARCHAR(255),
+    modifiedAt TIMESTAMP,
+    modifiedBy NVARCHAR(255),
+    PRIMARY KEY (ID) 
+)

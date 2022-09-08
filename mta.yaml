@@ -1,0 +1,19 @@
+_schema-version: "2.1"
+ID: BTP_DB_MM
+version: 0.0.1
+modules:
+- name: db
+  type: hdb
+  path: db
+  requires:
+  - name: hdi_BTP_DB_MM
+    properties:
+      TARGET_CONTAINER: ~{hdi-container-name}
+resources:
+- name: hdi_BTP_DB_MM
+  type: com.sap.xs.hdi-container
+  parameters:
+    config:
+      schema: BTP_DB_MMSCHEMA
+  properties:
+    hdi-container-name: ${service-name}
